@@ -8,11 +8,11 @@ node {
         '''
     }
     stage('Build image') {
-       app = docker.build("deeksharai/covid19webapptracker") 
+       app = docker.build("deeksharai668/todotest1") 
     }
 
      stage('push image') {
-        docker.withRegistry('https://registry.hub.docker.com', 'DOCKER HUB VIJAY') {
+        docker.withRegistry('https://registry.hub.docker.com', 'DOCKERHUB DEEKSHA') {
             app.push("latest")
          }
             echo "trying to docker image to docker hub"
